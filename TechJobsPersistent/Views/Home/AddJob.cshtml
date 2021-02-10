@@ -6,6 +6,23 @@
         <input class="form-control" />
         <span></span>
     </div>
+    <div class="form-group">
+        <label>Employer Information</label>
+        <div>
+            <select>
+                @*@foreach (var item in ViewBag.employers)
+                {
+                    <option>@item.Name</option>
+                }*@
+            </select>
+        </div>
+
+        <div>
+            <button href="/add">Add Employer</button>
+        </div>
+        <span></span>
+
+    </div>
 
     <input type="submit" value="Add Job" />
 </form>
