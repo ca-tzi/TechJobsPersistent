@@ -47,6 +47,8 @@ namespace TechJobsPersistent.Controllers
 
         public IActionResult ProcessAddJobForm(AddJobViewModel addJobViewModel)
         {
+            List<Employer> employers = context.Employers.ToList();
+            ViewBag.employers = employers;
 
             if (ModelState.IsValid)
             {
@@ -54,7 +56,7 @@ namespace TechJobsPersistent.Controllers
                 Job job = new Job
                 {
                     Name = addJobViewModel.Name,
-                    Id = addJobViewModel.Id
+                    EmployerId = addJobViewModel.EmployerId
 
                 };
 

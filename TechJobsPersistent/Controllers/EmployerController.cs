@@ -43,7 +43,7 @@ namespace TechJobsPersistent.Controllers
 
             return View(addEmployerViewModel);
         }
-        [HttpPost]
+        
         
         public IActionResult ProcessAddEmployerForm(AddEmployerViewModel addEmployerViewModel)
         {
@@ -60,7 +60,7 @@ namespace TechJobsPersistent.Controllers
 
                 context.Employers.Add(employer);
                 context.SaveChanges();
-                return Redirect("../home/addjob");
+                
 
             }
             return View("../home/addjob", addEmployerViewModel);
