@@ -51,14 +51,14 @@ namespace TechJobsPersistent.Controllers
             if (ModelState.IsValid)
             {
 
-                Employer employer = new Employer
+                Job job = new Job
                 {
                     Name = addJobViewModel.Name,
                     Id = addJobViewModel.Id
 
                 };
 
-                context.Employers.Add(employer);
+                context.Jobs.Add(job);
                 context.SaveChanges();
 
             }
