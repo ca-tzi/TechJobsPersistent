@@ -30,6 +30,7 @@ namespace TechJobsPersistent.Controllers
 
         public IActionResult Add()
         {
+            
             Skill skill = new Skill();
             return View(skill);
         }

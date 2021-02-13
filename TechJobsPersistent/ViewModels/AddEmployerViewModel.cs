@@ -13,6 +13,10 @@ namespace TechJobsPersistent.Models
         [Required]
         public string Location { get; set; }
 
-        
+      
+
     }
+
+  
+
 }
